@@ -26,9 +26,9 @@ jobs:
       uses: Jimver/cuda-toolkit@v0.2.5
       with:
         # Cuda version
-        cuda: 11.6 # optional, default is 11.5.1
+        cuda: 11.5.1 # optional, default is 11.5.1
         # Only installs specified subpackages, must be in the form of a JSON array. For example, if you only want to install nvcc and visual studio integration: ["nvcc", "visual_studio_integration"] double quotes required! Note that if you want to use this on Linux, 'network' method MUST be used.
-        #sub-packages: ["nvcc"]
+        sub-packages: ["nvcc", "visual_studio_integration"]
         # Installation method, can be either 'local' or 'network'. 'local' downloads the entire installer with all packages and runs that (you can still only install certain packages with sub-packages on Windows). 'network' downloads a smaller executable which only downloads necessary packages which you can define in subPackages
         #method: local # optional, default is local
         # (Linux and 'local' method only) override arguments for the linux .run installer. For example if you don't want samples use ["--toolkit"] double quotes required!
